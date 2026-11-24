@@ -1,0 +1,38 @@
+/* ==========================================================
+   Дизайн-токени (відповідають стилям дизайн-системи у Figma)
+   ========================================================== */
+:root {
+  /* Кольорова палітра */
+  --color-primary: #6b3e26;        /* кавовий — кнопки, акценти */
+  --color-primary-dark: #4a2a19;   /* стан hover, шапка, підвал */
+  --color-accent: #e0a458;         /* карамельний — бейджі, ціни */
+  --color-bg: #fbf7f2;             /* фон сторінки */
+  --color-surface: #ffffff;        /* фон карток */
+  --color-text: #2b211c;           /* основний текст */
+  --color-muted: #6e625a;          /* другорядний текст */
+  --color-border: #e8ded3;         /* межі, роздільники */
+
+  /* Типографіка */
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: "Segoe UI", Roboto, Arial, sans-serif;
+  --fs-h1: clamp(2rem, 4vw + 1rem, 3.25rem);
+  --fs-h2: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --lh-body: 1.6;
+
+  /* Відступи (крок 8 px) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+
+  /* Інше */
+  --radius: 12px;
+  --radius-pill: 999px;
+  --shadow: 0 4px 16px rgba(43, 33, 28, 0.08);
+  --container: 1200px;
+}

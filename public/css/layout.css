@@ -1,0 +1,202 @@
+/* ==========================================================
+   Макет: контейнер, шапка, підвал, сітки (Flexbox і Grid)
+   ========================================================== */
+.container {
+  width: min(100% - 2 * var(--space-2), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-8);
+}
+
+.section--alt {
+  background-color: var(--color-surface);
+}
+
+.section__head {
+  max-width: 640px;
+  margin-bottom: var(--space-4);
+}
+
+.section__head p {
+  color: var(--color-muted);
+}
+
+/* ---------- Шапка (Flexbox: логотип ліворуч, меню праворуч) ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-primary-dark);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 72px;
+}
+
+.logo {
+  order: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo:hover,
+.logo:focus-visible {
+  color: var(--color-accent);
+}
+
+.logo svg {
+  width: 32px;
+}
+
+.main-nav {
+  order: 1;
+}
+
+.main-nav__list {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.main-nav__link {
+  display: block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus-visible {
+  color: var(--color-primary-dark);
+  background-color: var(--color-accent);
+}
+
+.main-nav__link[aria-current="page"] {
+  color: var(--color-primary-dark);
+  background-color: #fff;
+}
+
+/* ---------- Hero (Grid: текст + ілюстрація) ---------- */
+.hero {
+  padding-block: var(--space-8);
+  background: linear-gradient(135deg, #f3e6d8 0%, var(--color-bg) 70%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.hero__lead {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  max-width: 34em;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.page-hero {
+  padding-block: var(--space-6);
+  background: linear-gradient(135deg, #f3e6d8 0%, var(--color-bg) 70%);
+}
+
+.page-hero p {
+  color: var(--color-muted);
+  max-width: 40em;
+  margin: 0;
+}
+
+/* ---------- Сітки карток (Grid) ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Сторінка з бічною панеллю: основний вміст + aside */
+.with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Дві колонки (контакти) */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* ---------- Підвал (Grid: 3 колонки) ---------- */
+.site-footer {
+  padding-block: var(--space-6) var(--space-3);
+  color: #f3e6d8;
+  background-color: var(--color-primary-dark);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.site-footer h2 {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.site-footer a {
+  color: #f3e6d8;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--color-accent);
+}
+
+.site-footer li + li {
+  margin-top: var(--space-1);
+}
+
+.site-footer__bottom {
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+.hero__art {
+  width: 100%;
+  max-width: 340px;
+  justify-self: center;
+}

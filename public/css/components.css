@@ -1,0 +1,303 @@
+/* ==========================================================
+   Компоненти дизайн-системи: кнопки, картки, бейджі, форма
+   ========================================================== */
+
+/* ---------- Кнопка (варіанти: primary / secondary) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  font: 600 1rem/1.2 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn--primary {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  color: #fff;
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn--secondary {
+  color: var(--color-primary);
+  background-color: transparent;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+/* ---------- Бейдж ---------- */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background-color: var(--color-accent);
+}
+
+/* ---------- Картка переваги ---------- */
+.feature {
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+}
+
+.feature__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-2);
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.feature__icon svg {
+  width: 28px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ---------- Картка товару (Flexbox у стовпець) ---------- */
+.product {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.product__media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(160deg, #f3e6d8, #e8cfb4);
+}
+
+.product__media svg {
+  width: 45%;
+}
+
+.product__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--space-3);
+}
+
+.product__body p {
+  flex: 1;
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+}
+
+.product__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1);
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ---------- Банер із закликом до дії ---------- */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border-radius: var(--radius);
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.cta h2 {
+  color: #fff;
+  margin-bottom: var(--space-1);
+}
+
+.cta p {
+  margin: 0;
+  color: #f3e6d8;
+}
+
+.cta .btn--primary {
+  color: var(--color-primary-dark);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ---------- Меню: навігація по категоріях ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.chips a {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chips a:hover,
+.chips a:focus-visible {
+  border-color: var(--color-primary);
+}
+
+.menu-category + .menu-category {
+  margin-top: var(--space-6);
+}
+
+/* ---------- Бічна панель ---------- */
+.aside-card {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.aside-card + .aside-card {
+  margin-top: var(--space-3);
+}
+
+.aside-card li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: var(--space-1);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.aside-card li:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Команда ---------- */
+.person {
+  text-align: center;
+}
+
+.person__photo {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-2);
+  border-radius: 50%;
+  font: 700 2rem var(--font-heading);
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.person p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ---------- Таблиця графіка роботи ---------- */
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours th,
+.hours td {
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.hours td {
+  text-align: right;
+}
+
+/* ---------- Форма ---------- */
+.form {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font: inherit;
+  color: inherit;
+  background-color: var(--color-bg);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-accent);
+}
+
+.map {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  margin-top: var(--space-3);
+  border-radius: var(--radius);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 38px, rgba(107, 62, 38, 0.12) 38px 40px),
+    repeating-linear-gradient(90deg, transparent 0 38px, rgba(107, 62, 38, 0.12) 38px 40px),
+    #f3e6d8;
+}

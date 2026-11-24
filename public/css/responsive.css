@@ -1,0 +1,148 @@
+/* ==========================================================
+   Адаптивність: медіазапити (desktop-first)
+   Брейкпоінти: 1024 px — планшет, 640 px — мобільний
+   ========================================================== */
+
+/* ---------- Планшет ---------- */
+@media (max-width: 1024px) {
+  .section {
+    padding-block: var(--space-6);
+  }
+
+  .hero__inner {
+    gap: var(--space-4);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .with-sidebar,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-aside {
+    position: static;
+  }
+
+  .product__media svg {
+    width: 35%;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer__grid > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Мобільний ---------- */
+@media (max-width: 640px) {
+  /* Шапка: меню згортається в кнопку-«бургер» */
+  .site-header__inner {
+    flex-wrap: wrap;
+    min-height: 64px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: var(--space-2);
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+  }
+
+  .main-nav__link {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+  }
+
+  .menu-toolbar,
+  .search,
+  .search input {
+    width: 100%;
+  }
+
+  .menu-aside {
+    position: static;
+  }
+
+  .hero {
+    padding-block: var(--space-4);
+  }
+
+  .hero__inner,
+  .two-col,
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__art {
+    order: -1;
+    max-width: 220px;
+    margin-inline: auto;
+  }
+
+  .hero__actions .btn {
+    flex: 1;
+  }
+
+  .grid--3,
+  .grid--4,
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .cta .btn {
+    width: 100%;
+  }
+
+  .form {
+    padding: var(--space-3);
+  }
+
+  /* Картка товару стає горизонтальною: менше прокручування */
+  .product {
+    flex-direction: row;
+  }
+
+  .product__media {
+    flex: 0 0 96px;
+    aspect-ratio: auto;
+  }
+
+  .product__media svg {
+    width: 56px;
+  }
+
+  .product__body {
+    padding: var(--space-2);
+  }
+
+  .product__body p {
+    margin-bottom: var(--space-1);
+  }
+}

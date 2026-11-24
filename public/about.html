@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Історія кав'ярні «Зерно», наші принципи та команда.">
+  <title>Про нас — кав'ярня «Зерно»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/interactive.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/utils.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/menu-filter.js" defer></script>
+  <script src="js/faq.js" defer></script>
+  <script src="js/booking-form.js" defer></script>
+  <script src="js/menu-api.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Перейти до основного вмісту</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Кав'ярня «Зерно» — на головну">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 24h36v14a16 16 0 0 1-16 16h-4A16 16 0 0 1 10 38z" fill="#e0a458"/><path d="M46 28h4a7 7 0 0 1 0 14h-5" fill="none" stroke="#e0a458" stroke-width="4"/><path d="M20 8c-3 4 3 6 0 10M30 8c-3 4 3 6 0 10M40 8c-3 4 3 6 0 10" fill="none" stroke="#e0a458" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>Зерно</span>
+      </a>
+      <div class="header-actions">
+        <a class="cart-link" href="menu.html#order" aria-label="Ваше замовлення">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.6" fill="currentColor"/><circle cx="17" cy="19" r="1.6" fill="currentColor"/></svg>
+          <span class="cart-link__count" data-cart-count>0</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="main-nav" id="main-nav" aria-label="Головне меню">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Головна</a></li>
+          <li><a class="main-nav__link" href="menu.html">Меню</a></li>
+          <li><a class="main-nav__link" href="about.html" aria-current="page">Про нас</a></li>
+          <li><a class="main-nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Про нас</h1>
+        <p>Невелика команда людей, які люблять каву і хочуть, щоб вона була доступною та зрозумілою кожному.</p>
+      </div>
+    </section>
+
+    <div class="section">
+      <div class="container with-sidebar">
+        <article aria-labelledby="story-title">
+          <h2 id="story-title">Наша історія</h2>
+          <p>«Зерно» почалося у 2021 році з маленького кавового візка біля університету. Студенти й викладачі приходили по еспресо між парами, і вже за рік ми відкрили першу кав'ярню.</p>
+          <p>Сьогодні ми самі обсмажуємо зерно, співпрацюємо з фермерськими господарствами напряму та навчаємо бариста. Але головне не змінилося: смачна кава і привітна атмосфера.</p>
+          <h2>Наші принципи</h2>
+          <ul class="aside-card">
+            <li><span>Прозоре походження зерна</span><span>✓</span></li>
+            <li><span>Свіжа випічка без консервантів</span><span>✓</span></li>
+            <li><span>Багаторазові стаканчики зі знижкою</span><span>✓</span></li>
+          </ul>
+        </article>
+
+        <aside class="aside-card" aria-labelledby="facts-title">
+          <h2 id="facts-title" class="h3">«Зерно» у цифрах</h2>
+          <ul>
+            <li><span>Рік заснування</span><strong>2021</strong></li>
+            <li><span>Чашок на день</span><strong>≈ 400</strong></li>
+            <li><span>Сортів зерна</span><strong>6</strong></li>
+            <li><span>Бариста в команді</span><strong>8</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container faq-wrap">
+        <div class="section__head">
+          <h2 id="faq-title">Часті запитання</h2>
+          <p>Натисніть на питання, щоб побачити відповідь.</p>
+        </div>
+        <div class="faq" data-faq>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">Чи можна прийти з ноутбуком і попрацювати?</button>
+            </h3>
+            <div class="faq__a" id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden>
+              <p>Так. У залі є розетки біля кожного столу та безкоштовний Wi-Fi. У будні з 12:00 до 14:00 найбільше гостей, тому для роботи краще обрати ранок або вечір.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">Чи є рослинне молоко?</button>
+            </h3>
+            <div class="faq__a" id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>Так, вівсяне та мигдальне. Заміна коштує 15 грн для будь-якого напою.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">Як забрати попереднє замовлення?</button>
+            </h3>
+            <div class="faq__a" id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>Зберіть замовлення на сторінці «Меню», покажіть його на касі й оплатіть на місці. Напій приготуємо одразу, без черги.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">Чи можна забронювати весь зал?</button>
+            </h3>
+            <div class="faq__a" id="faq-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>Так, для подій до 30 гостей. Залиште заявку на сторінці «Контакти» з позначкою «Увесь зал» — ми зателефонуємо й узгодимо деталі.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="team-title">Команда</h2>
+          <p>Люди, які щодня готують для вас каву.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="person">
+            <div class="person__photo" aria-hidden="true">ОК</div>
+            <h3>Олена Коваль</h3>
+            <p>Засновниця, обсмажувальниця</p>
+          </article>
+          <article class="person">
+            <div class="person__photo" aria-hidden="true">АМ</div>
+            <h3>Андрій Мельник</h3>
+            <p>Шеф-бариста</p>
+          </article>
+          <article class="person">
+            <div class="person__photo" aria-hidden="true">ІС</div>
+            <h3>Ірина Савчук</h3>
+            <p>Кондитерка</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Кав'ярня «Зерно»</h2>
+          <p>Спешелті-кава власного обсмаження, свіжа випічка щодня та затишне місце для зустрічей і навчання.</p>
+        </section>
+        <section aria-labelledby="f-nav">
+          <h2 id="f-nav">Розділи</h2>
+          <ul>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="f-contacts">
+          <h2 id="f-contacts">Контакти</h2>
+          <address>
+            <ul>
+              <li>вул. Кіото, 19, Київ</li>
+              <li><a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
+              <li><a href="mailto:hello@zerno.example">hello@zerno.example</a></li>
+            </ul>
+          </address>
+        </section>
+      </div>
+      <p class="site-footer__bottom">© 2026 Кав'ярня «Зерно». Навчальний проєкт, лабораторна робота № 5.</p>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite" hidden></div>
+  <button class="to-top" type="button" data-to-top aria-label="Нагору" hidden>↑</button>
+</body>
+</html>

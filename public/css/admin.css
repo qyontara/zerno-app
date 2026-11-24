@@ -1,0 +1,82 @@
+/* ==========================================================
+   Адмін-панель
+   ========================================================== */
+.admin-login {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.admin-logout {
+  margin-left: auto;
+}
+
+.admin-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.admin-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.admin-tools select,
+.admin-table select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font: inherit;
+  background-color: var(--color-surface);
+}
+
+.admin-stats {
+  color: var(--color-muted);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.admin-table th {
+  font-weight: 700;
+  background-color: #f3e6d8;
+}
+
+.admin-table tr.is-new td:first-child {
+  box-shadow: inset 4px 0 0 var(--color-accent);
+}
+
+.admin-table tr.is-confirmed td:first-child {
+  box-shadow: inset 4px 0 0 #3a7d44;
+}
+
+.admin-table tr.is-cancelled td {
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+
+.admin-table tr.is-cancelled td:nth-last-child(-n + 2) {
+  text-decoration: none;
+}

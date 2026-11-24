@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Адмін-панель — кав'ярня «Зерно»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/interactive.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/utils.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <span>Зерно · адмін-панель</span>
+      </a>
+      <button class="btn btn--small admin-logout" type="button" data-logout hidden>Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <section class="admin-login" data-login aria-labelledby="login-title">
+        <h1 id="login-title">Вхід для адміністратора</h1>
+        <form class="form" data-login-form novalidate>
+          <div class="field">
+            <label for="token">Токен доступу</label>
+            <input id="token" name="token" type="password" autocomplete="current-password" required>
+            <p class="field__error" data-login-error></p>
+          </div>
+          <button class="btn btn--primary" type="submit">Увійти</button>
+        </form>
+      </section>
+
+      <section data-dashboard hidden aria-labelledby="dash-title">
+        <div class="admin-head">
+          <h2 id="dash-title">Заявки на бронювання</h2>
+          <div class="admin-tools">
+            <label for="status-filter">Статус:</label>
+            <select id="status-filter" data-status-filter>
+              <option value="">Усі</option>
+              <option value="new">Нові</option>
+              <option value="confirmed">Підтверджені</option>
+              <option value="cancelled">Скасовані</option>
+            </select>
+            <button class="btn btn--secondary btn--small" type="button" data-refresh>Оновити</button>
+          </div>
+        </div>
+        <p class="admin-stats" data-stats aria-live="polite"></p>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th scope="col">№</th>
+                <th scope="col">Дата і час</th>
+                <th scope="col">Ім'я</th>
+                <th scope="col">Телефон</th>
+                <th scope="col">Гостей</th>
+                <th scope="col">Коментар</th>
+                <th scope="col">Статус</th>
+                <th scope="col"><span class="visually-hidden">Дії</span></th>
+              </tr>
+            </thead>
+            <tbody data-rows></tbody>
+          </table>
+        </div>
+        <p class="empty-state" data-no-rows hidden>Заявок немає.</p>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast" data-toast role="status" aria-live="polite" hidden></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: zerno-app
+    runtime: node
+    plan: free
+    buildCommand: echo "no dependencies"
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: ADMIN_TOKEN
+        generateValue: true
